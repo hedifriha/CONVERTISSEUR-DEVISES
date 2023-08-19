@@ -1,0 +1,23 @@
+<div>
+  <h2>Historique des Conversions</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Taux réel</th>
+        <th>Taux saisi</th>
+        <th>Montant initial</th>
+        <th>Montant calculé</th>
+        <th>Devise</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let conversion of historique.slice(0 , 5).reverse(); let i = index">
+        <td>{{ conversion.tauxReel | number: '1.2-2' }}</td>
+        <td>{{ conversion.tauxSaisi | number: '1.2-2' }}</td>
+        <td>{{ conversion.montantInitial | number: '1.2-2' }}</td>
+        <td>{{ conversion.montantCalcule | number: '1.2-2' }}</td>
+        <td>{{ conversion.devise }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,18 @@
+<div class="tab-container">
+  <div class="tab-header">
+    <div class="tab" (click)="selectTab('Convertisseur')" [class.active]="selectedTab === 'Convertisseur'">Convertisseur</div>
+    <div class="tab" (click)="selectTab('Historique')" [class.active]="selectedTab === 'Historique'">Historique</div>
+  </div>
+  <div class="tab-content">
+    <ng-container *ngIf="selectedTab === 'Convertisseur'">
+        <app-conversion></app-conversion>
+    </ng-container>
+    <ng-container *ngIf="selectedTab === 'Historique'">
+        <app-historique></app-historique>
+    </ng-container>
+
+  </div>
+</div>
+
+
+
